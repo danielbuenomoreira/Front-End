@@ -1,0 +1,182 @@
+h1 {
+    text-align: left;
+    font-family: "Arial", Arial, sans-serif; /* altera o tipo de fonte */
+    font-size: 45px; /* altera o tamanho da fonte */
+    color: blue; /* altera a cor da fonte */
+}
+
+h2 {
+    text-align: left;
+    font-family: "Copperplate", Copperplate Gothic Light, fantasy;
+    font-size: 40px;
+    color: rgb(0, 0, 0)
+}
+
+h3 {
+    text-align: left;
+    font-family: "Brush Script MT", Brush Script Std, cursive;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+h4 {
+    text-align: left;
+    font-family: "Arial", Arial, sans-serif; /* altera o tipo de fonte */
+    font-size: 35px; /* altera o tamanho da fonte */
+    color: rgb(116, 0, 106); /* altera a cor da fonte */
+    font-style: italic;
+}
+
+h5 {
+    text-align: left;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+h6 {
+    text-align: left;
+    font-family: "Arial Narrow", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+a {
+    font-style: italic;
+    color: rgb(54, 54, 54);
+}
+
+.center {
+    text-align: center
+}
+
+table {
+ /*   border-collapse: collapse;  Ative ou remova essa tag para uma segunda configuração */ 
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    font-size: 20px;
+}
+
+.tab1 img{
+    float: left;
+    margin-right: 10px;
+}
+
+.img2 {
+    border: 3px solid rgb(0, 119, 255);
+    animation: mudar-cor3 3s infinite;
+}
+
+th {
+    text-align: left;
+    padding: 2px;
+    background-color: rgb(0, 195, 255);
+    color: white;
+    font-size: 45px; /* altera o tamanho da fonte */
+    color: blue; /* altera a cor da fonte */
+}
+
+tr {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(9, 214, 9);
+}
+
+/* Substitua a tag <marquee> com animação CSS */
+@keyframes marquee {
+    0% {left: -200px;}
+    50% {left: 0px;}
+    100% {left: 200px;}
+}
+
+.marquee-container {
+    overflow: hidden;
+}/*  DESATIVE ESSA OPÇÃO, CASO JULGUE NECESSÁRIO! */
+
+.marquee-content {
+    position: relative;
+    animation-name: marquee;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-align: center;
+}
+
+@keyframes mudar-cor {
+    0% {background-color: rgb(255, 73, 73);}
+    50% {background-color: rgb(52, 147, 255);}
+    100% {background-color: rgb(255, 251, 0);}
+}
+
+@keyframes mudar-cor2 {
+    0% {color: rgb(189, 0, 0);}
+    50% {color: rgb(22, 0, 223);}
+    100% {color: rgb(0, 112, 24);}
+}
+
+@keyframes mudar-cor3 {
+    0% {
+      border-color: rgb(255, 255, 255);
+    }
+    33% {
+      border-color: rgb(168, 178, 207);
+    }
+    66% {
+      border-color: rgb(0, 204, 255);
+    }
+    100% {
+      border-color: rgb(255, 255, 255);
+    }
+}
+  
+  /* Aplica a animação "mudar-cor" a um elemento <div> */
+.key1 {
+    text-align: center;
+    animation-name: mudar-cor;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.key2 {
+    text-align: left;
+    animation-name: mudar-cor;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.key3 {
+    text-align: left;
+    animation-name: mudar-cor;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.key4 {
+    animation-name: mudar-cor2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+dfn {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 2px;
+    font-size: 43px;
+    background-color: rgba(0, 217, 255, 0.541);
+    color: rgb(94, 0, 73);
+}

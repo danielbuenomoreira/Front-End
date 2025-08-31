@@ -1,0 +1,79 @@
+<html>
+	<head>
+    <meta charset="UTF-8">
+		<title>Calculadora em HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	</head>
+	<body background="img/7333590.gif">
+  <div class="container">
+  	<div class="coluna">
+	  	<h1 class="center">Calculadora:</h1>
+  		<form name="calculator">
+      	<input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+      	<input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+      	<input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+	      <input type="button" value="/" onClick="document.calculator.ans.value+='/'"><br>
+	      <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+	      <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+	      <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+	      <input type="button" value="*" onClick="document.calculator.ans.value+='*'"><br>
+	      <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+	      <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+	      <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+	      <input type="button" value="-" onClick="document.calculator.ans.value+='-'"><br>
+        <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+        <input type="button" value="." onClick="document.calculator.ans.value+='.'">
+      	<input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+      	<input type="button" value="+" onClick="document.calculator.ans.value+='+'"><br>
+		    <input type="reset" value="Reset">
+		<br>A solução é <input type="textfield" name="ans" value="">	
+		</form>
+    </div>
+		<br>
+	
+	<!--Próxima linha começa o cronômetro em Java Script-->
+	<div class="coluna">
+	<h1>Cronômetro:</h1>
+    <div id="cronometro">00:00:00</div>
+    <button onclick="iniciarCronometro()">Iniciar</button>
+    <button onclick="pararCronometro()">Parar</button>
+    <button onclick="zerarCronometro()">Zerar</button>
+    <script>
+      var cronometro = document.getElementById("cronometro");
+      var horas = 0;
+      var minutos = 0;
+      var segundos = 0;
+      var intervalo;
+
+      function iniciarCronometro() {
+        intervalo = setInterval(function() {
+          segundos++;
+          if (segundos == 60) {
+            segundos = 0;
+            minutos++;
+          }
+          if (minutos == 60) {
+            minutos = 0;
+            horas++;
+          }
+          cronometro.textContent = (horas ? (horas > 9 ? horas : "0" + horas) : "00") + ":" + (minutos ? (minutos > 9 ? minutos : "0" + minutos) : "00") + ":" + (segundos > 9 ? segundos : "0" + segundos);
+        }, 1000);
+      }
+
+      function pararCronometro() {
+        clearInterval(intervalo);
+      }
+
+      function zerarCronometro() {
+        clearInterval(intervalo);
+        horas = 0;
+        minutos = 0;
+        segundos = 0;
+        cronometro.textContent = "00:00:00";
+      }
+    </script></div></div>
+
+	<h2 class="center"><p>Desenvolvido por <cite>@DanielMoreiraProgramador</cite></p>
+	</body>
+</html>

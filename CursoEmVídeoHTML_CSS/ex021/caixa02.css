@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(20, 20, 58);
+    margin: 0px;
+    color: white;
+}
+
+header {
+    background-color: rgb(112, 112, 235);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px 2px;
+    box-shadow: 5px 5px 10px rgba(0, 14, 138, 0.651);
+}
+
+h1 {
+    display: inline-block;
+    box-shadow: inset 2px 1px 14px 6px rgb(0, 14, 138, 0.5);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+nav {
+    background-color: rgb(39, 39, 99);
+    padding: 3px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 14, 138, 0.651);
+    border-radius: 5px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: rgb(207, 207, 253);
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+nav > a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+main {
+    background-color: rgb(112, 112, 235);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px 2px;
+    box-shadow: 5px 5px 10px rgba(0, 14, 138, 0.651);
+}
+
+article {
+    padding: 5px;
+    background-color: rgb(95, 95, 197);
+    border-radius: 10px;
+    
+}
+
+article > aside {
+    background-color: rgb(114, 134, 223);
+}
+
+footer {
+    background-color: rgb(10, 0, 53);
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+}

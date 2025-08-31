@@ -1,0 +1,55 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: gold;
+    font-family: Arial, sans-serif;
+}
+
+/* Container com duas colunas */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    justify-content: space-between; /* Espaçamento entre as colunas */
+}
+
+/* Estilos das colunas */
+.coluna {
+    width: 48%; /* Largura das colunas */
+    padding: 10px;
+    border: 0px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o conteúdo no meio da página */
+.center-content {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+input {
+    font-size: 36px;
+    padding: 7;
+}
+
+form {
+    font-size: 36px;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+#cronometro {
+    font-size: 48px;
+    text-align: left;
+}
+
+    

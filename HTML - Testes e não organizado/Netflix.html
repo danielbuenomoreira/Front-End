@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #222;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .header .lang-selection {
+      display: flex;
+      align-items: center;
+    }
+
+    .header .lang-selection select {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    .header .lang-selection button {
+      background-color: #e50914;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 10px;
+      margin-top: 20px;
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .content {
+      display: flex; flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .content h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .content p {
+      margin: 10px 0;
+    }
+
+    .content button {
+      background-color: #e50914;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Netflix</h1>
+      <div class="lang-selection">
+        <select>
+          <option value="pt-BR">Português (BR)</option>
+          <option value="en-US">English (US)</option>
+        </select>
+        <button>Change Language</button>
+      </div>
+    </header>
+    <div class="movie-grid">
+      <!-- Movie posters will be rendered here -->
+    </div>
+    <div class="content">
+      <h2>Welcome to Netflix!</h2>
+      <p>Here you can find your favorite movies and TV shows.</p>
+      <button>Get Started</button>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code will be written here
+  </script>
+</body>
+</html>

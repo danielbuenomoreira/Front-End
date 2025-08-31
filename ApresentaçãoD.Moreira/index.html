@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script defer src="main.js"></script>
+  <title>Daniel Bueno Moreira</title>
+</head>
+<body>
+  <main>
+    <aside>
+      <ul class="Links">
+        <li onclick="navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>Página Inicial</li>
+        <li onclick="navigate(1)"><i class="fa-solid fa-user"></i>Sobre mim</li>
+        <li onclick="navigate(2)"><i class="fa-solid fa-list"></i>Serviços</li>
+        <li onclick="navigate(3)"><i class="fa-solid fa-images"></i>Galeria</li>
+        <li onclick="navigate(4)"><i class="fa-solid fa-comments"></i>Meu Contato</li>
+      </ul>
+    </aside>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide home-slide">
+          <div class="HomeContent">
+            <h1>Oi! Meu nome é <span class="stylized-name">Daniel</span>,</h1>
+            <h2>Um <span class="profissao">Web Developer</span></h2>
+            <p class="heroline">Apaixonado por criar experiências digitais incríveis.</p>
+            <div class="buttonGroup">
+              <button>Hire Me</button>
+              <button>Contact Me</button>
+            </div>
+          </div>
+          <div class="SideImg">
+            <div class="top-right-corner">
+              <hr class="hr1">
+              <hr class="hr2">
+            </div>
+            <img src="https://picsum.photos/id/237/200/200" alt="Daniel" />
+            <div class="bottom-left-corner">
+              <hr class="hr1">
+              <hr class="hr2">
+            </div>
+          </div>
+          <p class="slide-help">Use a rolagem para ver mais <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+        </section>
+
+        <section class="swiper-slide about-us">
+          <h1 class="heading">About Me</h1>
+          <h3 class="sub-heading">Me chamo Daniel, <span class="profissao">Web Developer</span></h3>
+          <p class="aboutMe-details">
+            Desenvolvedor com mais de 5 anos de experiência, apaixonado por transformar ideias em produtos digitais funcionais.
+          </p>
+          <div class="about-me-division">
+            <ul class="about-me-table">
+              <li><span>Experiência:</span> 5+ anos</li>
+              <li><span>País:</span> Brasil</li>
+              <li><span>Disponibilidade:</span> 24/7</li>
+              <li><span>Clientes satisfeitos:</span> 200+</li>
+              <li><span>Idade:</span> 33</li>
+              <li><span>Telefone:</span> (51) 98172-5802</li>
+              <li><span>Email:</span> moreira.danielbueno@gmail.com</li>
+              <li><span>Linguagens:</span> HTML, CSS, JavaScript</li>
+              <div class="buttonGroup">
+                <button>Hire Me</button>
+                <button>Contact Me</button>
+              </div>
+            </ul>
+            <ul class="skill-bar">
+              <li><p>HTML</p><div class="bar"><div class="active-bar" style="width:99%"></div></div></li>
+              <li><p>CSS</p><div class="bar"><div class="active-bar" style="width:90%"></div></div></li>
+              <li><p>JavaScript</p><div class="bar"><div class="active-bar" style="width:85%"></div></div></li>
+              <li><p>Python</p><div class="bar"><div class="active-bar" style="width:75%"></div></div></li>
+              <li><p>Django</p><div class="bar"><div class="active-bar" style="width:70%"></div></div></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="swiper-slide services">
+          <h1 class="heading">Services</h1>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div><h2>Web Design</h2><p>Criação de interfaces modernas e responsivas.</p></div>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-globe"></i></div><h2>Web Development</h2><p>Desenvolvimento de sites funcionais e otimizados.</p></div>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div><h2>SEO</h2><p>Melhoria de ranqueamento no Google e mecanismos de busca.</p></div>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-image"></i></div><h2>Design Gráfico</h2><p>Criação de identidade visual para marcas e produtos.</p></div>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div><h2>Apps</h2><p>Desenvolvimento de apps multiplataforma.</p></div>
+          <div class="service"><div class="service-icon"><i class="fa-solid fa-database"></i></div><h2>DB Admin</h2><p>Administração e otimização de bancos de dados.</p></div>
+        </section>
+
+        <section class="swiper-slide gallery">
+          <h1 class="heading">Gallery</h1>
+          <div class="project"><img src="https://picsum.photos/200/300?random=1" alt="Projeto 1"></div>
+          <div class="project"><img src="https://picsum.photos/200/300?random=2" alt="Projeto 2"></div>
+          <div class="project"><img src="https://picsum.photos/200/300?random=3" alt="Projeto 3"></div>
+          <div class="project"><img src="https://picsum.photos/200/300?random=4" alt="Projeto 4"></div>
+          <div class="project"><img src="https://picsum.photos/200/300?random=5" alt="Projeto 5"></div>
+        </section>
+
+        <section class="swiper-slide contactMe">
+          <h1 class="heading">Contact Me</h1>
+          <div class="contactInfo"><i class="fa-solid fa-phone"></i><h3>Telefone</h3><p>(51) 98172-5802</p></div>
+          <div class="contactInfo"><i class="fa-solid fa-location-dot"></i><h3>Localização</h3><p>Porto Alegre, RS</p></div>
+          <div class="contactInfo"><i class="fa-regular fa-envelope"></i><h3>Email</h3><p>moreira.danielbueno@gmail.com</p></div>
+          <div class="contactInfo"><i class="fa-solid fa-globe"></i><h3>Website</h3><p>www.danielbmoreira.dev</p></div>
+
+          <form>
+            <h2>Envie sua mensagem
+              <div class="SocialLinks">
+                <i class="fa-brands fa-codepen"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </h2>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="10" placeholder="Digite sua mensagem..." required></textarea>
+            <button class="primary">Enviar</button>
+          </form>
+          <footer>
+            <li>Copyright © 2025 - Daniel Moreira</li>
+          </footer>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

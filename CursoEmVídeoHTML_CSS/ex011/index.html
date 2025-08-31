@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+    <style>
+        ul {
+        list-style: none;
+    }
+        li {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 735px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <ul>
+        <li>
+            <audio controls>
+                <source src="audio/WhereAreWeGoing.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>Where Are We Going - Mob Of The Dead
+        </li>
+        <li>
+            <audio controls>
+                <source src="audio/TopGearRemix.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>Top Gear Remix - SNes
+        </li>
+    </ul>
+</body>
+</html>

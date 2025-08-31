@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginação</title>
+    <style>
+        /* Estilize os botões de página conforme necessário */
+        .pagination-button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Elemento onde a paginação será exibida -->
+    <div id="pagination"></div>
+
+    <script>
+        // Função para criar a paginação
+        function createPagination(currentPage, totalPages) {
+            const paginationContainer = document.getElementById("pagination");
+            paginationContainer.innerHTML = ""; // Limpa a paginação existente
+
+            // Cria o botão "Anterior"
+            const prevButton = document.createElement("button");
+            prevButton.innerText = "Anterior";
+            prevButton.disabled = currentPage === 1;
+            prevButton.classList.add("pagination-button");
+            prevButton.addEventListener("click", () => goToPage(currentPage - 1));
+            paginationContainer.appendChild(prevButton);
+
+            // Cria os botões de página
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement("button");
+                pageButton.innerText = i;
+                pageButton.disabled = i === currentPage;
+                pageButton.classList.add("pagination-button");
+                pageButton.addEventListener("click", () => goToPage(i));
+                paginationContainer.appendChild(pageButton);
+            }
+
+            // Cria o botão "Próximo"
+            const nextButton = document.createElement("button");
+            nextButton.innerText = "Próximo";
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.classList.add("pagination-button");
+            nextButton.addEventListener("click", () => goToPage(currentPage + 1));
+            paginationContainer.appendChild(nextButton);
+        }
+
+        // Função para navegar para uma página específica
+        function goToPage(pageNumber) {
+            // Substitua isso pela sua lógica para carregar o conteúdo da página especificada
+            console.log(`Navegando para a página ${pageNumber}`);
+            // Para fins de demonstração, apenas registramos o número da página.
+        }
+
+        // Exemplo de uso: createPagination(páginaAtual, totalDePáginas);
+        createPagination(1, 10);
+    </script>
+</body>
+</html>

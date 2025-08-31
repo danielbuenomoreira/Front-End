@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    display: inline-block;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+}
+div:hover {
+    background-color: yellow;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited {
+    color: darkred;
+}
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+a:active {
+    color: yellow;
+}
+
+.especial {
+    background-color: rgb(255, 182, 182);
+}
+.especial::after {
+    content: ' \21D0';
+}
+.especial::before {
+    content: '\21D2 ';
+}
+.especial::before,
+.especial::after {
+    text-decoration: none;
+    font-weight: normal;
+    color: red;
+}

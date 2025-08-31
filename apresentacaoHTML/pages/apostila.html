@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="shortcut icon" href="img/DMoreira.ico" type="image/x-ico">
+	<link rel="stylesheet" type="text/css" href="css/estilos2.css">
+	<title>Apostila de HTML + CSS</title>
+</head>
+
+<body>
+	<div class="coluna1">
+		<h1>Apostila de HTML + CSS (Abaixo, um documento em PDF para complementar)</h1>
+		<pre><!--Começou da tag PRE-->
+	<details><summary><b>Esqueleto BÁSICO para começar QUALQUER HTML:</summary></b>
+  &lt;!DOCTYPE html&gt;              <i>Essa tag informa que o documento é HTML5</i>
+  &lt;html lang="pt-br"&gt;             <i>Nessa tag iniciamos o documento HTML, já configurado como Português do Brasil</i>
+	&lt;head&gt;                         <i>Início da tag HEAD, onde colocamos as configurações do nosso documento HTML e/ou CSS</i>
+	   &lt;meta charset="UTF-8"&gt;            <i>Codificação binária UTF-8, que pode representar qualquer caractere universal padrão do Unicode</i>
+	   &lt;title&gt;Título da página&lt;/title&gt;     <i>Aqui configuramos o título da página.</i>
+	&lt;/head&gt;                       <i>Fechamento da tag HEAD</i>
+	&lt;body&gt;                        <i>Início da tag BODY, onde incluímos todo o conteúdo visível do site.</i>
+	   &lt;h1&gt;Título&lt;/h1&gt;       <i>Apenas um exemplo de título.</i>
+	   &lt;h4&gt;&lt;p&gt;Texto para visualização!&lt;/p&gt;&lt;/h4&gt;     <i>Apenas um exemplo de conteúdo</i>
+	&lt;/body&gt;                      <i>Fechamento da tag BODY</i>
+  &lt;/html&gt;                             <i>Fechamento da tag HTML</i>
+
+   <i>Caso queira apenas copiar e colar esse código num documento HTML,
+   apague o que estiver em itálico ou adicione a tag &lt;!-- antes e --&gt; no final do texto que não quer que apareça no navegador.
+   O que colocar no meio de &lt;!-- e --&gt; vai se transformar em comentário e vai aparecer apenas no próprio código HTML.</i>
+</details>
+	<details><summary><b>-Ajustar página automaticamente:</b></summary>
+	&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</details>
+	<details><summary><b>-Exemplo de tag para deixar o CSS em um arquivo separado:</b></summary>
+	&lt;link rel="stylesheet" type="text/css" href="css/estilos.css"&gt;</details>
+	<details><summary><b>Esqueleto BÁSICO + ajuste automático da página + arquivo CSS em arquivo separado:</summary></b>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="pt-br"&gt;
+	&lt;head&gt;
+	   &lt;meta charset="UTF-8"&gt;
+	   &lt;title&gt;Título da página&lt;/title&gt;
+	   &lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;
+	   &lt;link rel="stylesheet" type="text/css" href="css/estilos.css"&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+	   &lt;h1&gt;Título&lt;/h1&gt;
+	   &lt;h4&gt;&lt;p&gt;Texto para visualização!&lt;/p&gt;&lt;/h4&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+
+	<i>Para funcionar esse exemplo de arquivo CSS citado acima, você deve criar um arquivo "estilos.css"
+	dentro de uma pasta com título "CSS" e colocar no mesmo diretório do seu arquivo HTML".</i>
+</details>
+	</pre>
+		<img class="img1" src="img/dancemusic.gif" alt="Image" height="165" width="220">
+		<br>
+		<h2>Ao lado, uma playlist cuidadosamente selecionada<br>
+			para você apreciar enquanto estuda.</h2><br clear="left">
+		<pre>
+    <details><summary><b>-Incluir áudio no HTML e organizar em lista:</b></summary>
+	&lt;ul&gt;&lt;li&gt;
+	&lt;audio controls&gt;&lt;source src="(CaminhoDOarquivo)/(NomeDOarquivo).mp3" type="audio/mpeg"&gt;
+	Seu navegador não suporta o elemento de áudio.&lt;/audio&gt;(NomePARAexibição)
+	&lt;/li&gt;&lt;/ul&gt;
+	*Incluir &lt;li&gt; e &lt;/li&gt; para cada áudio da lista
+	*Incluir &lt;ul&gt; e &lt;/ul&gt; para iniciar e finalizar a listagem</details>
+	<details><summary><b>Exemplo de uso de tabela em HTML:</b></summary>
+	&lt;table&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Nome&lt;/th&gt;
+			&lt;th&gt;Sobrenome&lt;/th&gt;
+			&lt;th&gt;Idade&lt;/th&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;João&lt;/td&gt;
+			&lt;td&gt;Silva&lt;/td&gt;
+			&lt;td&gt;30&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Maria&lt;/td&gt;
+			&lt;td&gt;Souza&lt;/td&gt;
+			&lt;td&gt;25&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/table&gt;
+	<i>Uma tabela HTML também pode incluir elementos &lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt; e &lt;tbody&gt;.</i>
+	</details>
+    <details><summary><b>-Exemplo de tag CSS (vou dar exemplo da tag PRE dessa própria página):</b></summary>
+pre &#123;
+	border: 1px solid   #cccccc;           <i>border: Define a largura, o estilo e a cor da borda do elemento.</i>
+	font-family: Arial, Helvetica, sans-serif;     <i>font-family: Define a fonte usada para o texto dentro do elemento.</i>
+	font-weight: bolder;                       <i>font-weight: Define a espessura da fonte usada para o texto dentro do elemento.</i>
+	font-size: 17px;                             <i>font-size: Define o tamanho da fonte usada para o texto dentro do elemento.</i>
+	line-height: 1,5;                            <i>line-height: Define a altura da linha do texto dentro do elemento.</i>
+	padding: 3px;                              <i>padding: Define o preenchimento interno do elemento.</i>
+	margin-left: 10px;                       <i>margin-left: Define a margem esquerda do elemento.</i>
+	margin-right: 10px;                    <i>margin-right: Define a margem direita do elemento.</i>
+	white-space: pre-wrap;             <i>white-space: Define como o espaço em branco é tratado dentro do elemento.</i>
+	&#125;
+
+	<i>Existem muitas outras propriedades CSS, aqui só são alguns exemplos.</i></details>
+	<details><summary><b>Conhece a tag de <dfn>Itálico especial</dfn>?</b></summary>
+	A tag <dfn>DFN</dfn> é uma tag HTML que representa o <strong>elemento de definição</strong>.
+	Ela é usada para marcar um termo que será definido dentro do conteúdo.
+	O elemento pai mais próximo da tag <dfn>DFN</dfn> também deve conter a definição/explicação do termo.
+	O termo dentro da tag <dfn>DFN</dfn> pode ser qualquer um dos seguintes:
+
+		1. Apenas o conteúdo do elemento <dfn>DFN</dfn>.
+		2. Com o atributo <dfn>title</dfn> adicionado.
+		3. Com uma tag <dfn>ABBR</dfn> dentro do elemento <dfn>DFN</dfn>.
+		4. Com o atributo <dfn>id</dfn> adicionado.
+
+	**Aqui está um exemplo de como usar a tag <dfn>DFN</dfn>:
+		<i>Digite no seu código:</i>
+&lt;dfn title="HyperText Markup Language"&gt;HTML&lt;/dfn&gt; é a linguagem de marcação padrão para criar páginas da web.
+		<i>...para ficar assim:</i>
+	<dfn title="HyperText Markup Language">HTML</dfn> é a linguagem de marcação padrão para criar páginas da web.
+
+	**Ou você pode usar com CSS e ficar assim:
+
+	<dfn class="dfn">Tag DFN com CSS</dfn>
+
+	<i>Foi usado essas propriedades na tag DFN para ficar desse jeito:</i>
+	dfn &#123;
+		border: 1px solid rgb(0, 0, 0);
+		padding: 2px;
+		font-size: 43px;
+		background-color: rgba(0, 217, 255, 0.541);
+		color: rgb(94, 0, 73);
+		&#125;
+</details>
+		<details><summary><b>Tags pouco usadas:</b></summary>
+		<a href="https://github.com/pazfelipe/htmls-pouco-usadas/blob/main/screenshot.png" target="_blank">Tags pouco usadas</a></details>
+		<details><summary><b>Links úteis para criar uma página Web:</b></summary>
+		<a href="https://emojipedia.org/" target="_blank">Emojipedia</a>
+		<a href="https://ayltoninacio.com.br/blog/como-colocar-icones-emoji-html-no-seu-site" target="_blank">EMOJI HTML: lista completa</a>
+		( adicione & + # + x + o código hexadecimal do emoji + ; )</a>
+		Exemplo: & + # + x + 1F600 + ; = &#x1F600;
+						& + # + x + 2764 + ; = &#x2764;
+					& + # + x + 231A + ; = &#x231A;
+		<a href=https://www.homehost.com.br/blog/tutoriais/tabela-de-cores-html/ target="_blank">Tabela de cores HTML</a>
+		<a href=https://erikasarti.com/html/acentuacao-caracteres-especiais/ target="_blank">Tabela de Acentuação e Caracteres Especiais em HTML</a>
+		<a href=https://www.dm.ufscar.br/~waldeck/curso/html/apend/tabcod.html target="_blank">Tabela de Códigos Especiais</a>
+		<a href=https://erikasarti.com/html/dingbats-simbolos-desenhos/ target="_blank">Tabela de Símbolos Especiais, Dingbats, Emojis e Desenhos em HTML</a>
+				</details>
+		</pre>
+		<object data="arquivos/apostilahtml.pdf" type="application/pdf" width="100%" height="600px">
+			<p>Seu navegador não tem suporte para visualizar PDFs.</p>
+		</object>
+
+		<a href="../index.html" target="_blank">
+			<h1>Página de apresentação HTML com CSS básico</h1>
+		</a>
+	</div>
+	<div class="coluna2">
+		<img src="img/musica.gif" width="300" height="167"><br>
+		<h2>Músicas nacionais:</h2>
+		<ul>
+			<li>
+				<audio controls>
+					<source src="arquivos/querencia.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Querência Amada - Osvaldir e Carlos Magrão
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/metamorfoseambulante.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Metamorfose Ambulante - Raul Seixas
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/eunasciadezmilanosatrás.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Eu Nasci a Dez Mil Anos Atrás - Raul Seixas
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/exagerado.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Exagerado - Cazuza
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/diasmelhores.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Dias Melhores - Jota Quest ft. Milton Nascimento
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/asabranca.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Asa Branca - Luiz Gonzaga
+			</li>
+		</ul>
+		<h2>Músicas internacionais:</h2>
+		<ul>
+			<li>
+				<audio controls>
+					<source src="arquivos/sweetchild.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Sweet Child O' Mine - Guns N' Roses
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/legendary.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Legendary - Welshly
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/livinonaprayer.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Livin On a Prayer - Bon Jovi
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/shepherdoffire.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Shepherd of Fire - Avenged Sevenfold
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/carryon.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Carry On - Avenged Sevenfold
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/believer.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Believer - Imagine Dragons
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/believer2.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Believer (remix) - Imagine Dragons
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/demons.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Demons - Imagine Dragons
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/igottafeeling.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>I Gotta Feeling - The Black Eyed Peas
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/halo.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Halo - Beyoncé
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/ifiwereaboy.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>If I Were a Boy - Beyoncé
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/wakemeup.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Wake Me Up - Avicii
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/levels.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Levels - Avicii
+			</li>
+		</ul>
+		<h2>Músicas de animes/animações:</h2>
+		<ul>
+			<li>
+				<audio controls>
+					<source src="arquivos/bluebird.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Blue Bird - Naruto Shippuden
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/flow2.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Flow - Tragicômico
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/flow.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Flow - Sign
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/madagascar.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Eu Me Remexo Muito! - Madagascar
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/madagascar2.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>I Like To Move It! - Madagascar
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/dbzgottapower.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>We Gotta Power - Dragon Ball Z
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/grip.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Grip! - Inuyasha
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/dbssurvivor.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Survivor - Dragon Ball Super
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/dbssurvivor.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Survivor - Dragon Ball Super
+			</li>
+			<li>
+				<audio controls>
+					<source src="arquivos/dbgtsorriso.mp3" type="audio/mpeg">
+					Seu navegador não suporta o elemento de áudio.
+				</audio>Sorriso Resplandecente - Dragon Ball GT
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>

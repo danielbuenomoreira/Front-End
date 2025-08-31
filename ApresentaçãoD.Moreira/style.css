@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonbon&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #343a40;
+  color: white;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  width: 280px;
+  background-color: #212529;
+  display: flex;
+  flex-direction: column;
+}
+
+.Links {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Links li {
+  list-style: none;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.Links li:hover,
+.Links .activeLink {
+  color: #80ed99;
+}
+
+.Links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to left, transparent, #ffffff24, transparent);
+}
+
+.swiper {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #343a40;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+.home-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.HomeContent {
+  flex: 1;
+}
+
+.HomeContent h1,
+.HomeContent h2 {
+  margin-bottom: 10px;
+}
+
+.stylized-name {
+  color: #80ed99;
+}
+
+.profissao {
+  color: #85f69f;
+}
+
+.heroline {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttonGroup button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  background-color: #1d8637;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.SideImg {
+  width: 30%;
+  position: relative;
+}
+
+.SideImg img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hr1 {
+  width: 150px;
+  height: 10px;
+  background-color: #80ed99;
+  border-radius: 3px;
+  border: none;
+}
+
+.hr2 {
+  width: 10px;
+  height: 120px;
+  background-color: #80ed99;
+  border-radius: 3px;
+  border: none;
+}
+
+.top-right-corner,
+.bottom-left-corner {
+  position: absolute;
+}
+
+.top-right-corner {
+  top: -50px;
+  right: -50px;
+  transform: rotate(90deg);
+}
+
+.bottom-left-corner {
+  bottom: -50px;
+  left: -50px;
+  transform: rotate(-90deg);
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #80ed99;
+  margin-bottom: 20px;
+}
+
+.about-me-division {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-me-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 55%;
+}
+
+.about-me-table li {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #ffffff30;
+}
+
+.about-me-table span {
+  color: #80ed99;
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 40%;
+}
+
+.skill-bar li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.skill-bar p {
+  margin-bottom: 5px;
+  color: #80ed99;
+  font-weight: 600;
+}
+
+.bar {
+  background-color: #272c30;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.active-bar {
+  background-color: #80ed99;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.service:hover {
+  background-color: #80ed99;
+  color: #176d2d;
+}
+
+.service i,
+.service h2 {
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contactMe {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+.contactInfo {
+  text-align: center;
+}
+
+.contactInfo i {
+  font-size: 2rem;
+  color: #80ed99;
+  margin-bottom: 10px;
+}
+
+.contactMe form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMe input,
+.contactMe textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #212529;
+  color: white;
+}
+
+.contactMe input:focus,
+.contactMe textarea:focus {
+  border: 1px solid #80ed99;
+  outline: none;
+}
+
+.contactMe button {
+  width: 150px;
+  padding: 10px;
+  background-color: #1d8637;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.SocialLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.SocialLinks i {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #212529;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.SocialLinks i:hover {
+  background-color: #176d2d;
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+h2 {
+    margin: 10px;
+    color: #000000;
+}
+
+.coluna {
+    width: 48%;
+    float: left;
+  }
+
+div {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    box-shadow: 20px 20px 20px rgba(5,0,0,0.1);
+    margin: 7px;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+dt {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 3px;
+    padding: 0px;
+}
+dd {
+    margin: 0;
+    padding: 0 0 10px 20px;
+}
