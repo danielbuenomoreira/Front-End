@@ -48,7 +48,7 @@ header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 3em;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 header > p {
