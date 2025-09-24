@@ -313,20 +313,15 @@ footer {
   color: white;
 }
 
-.SocialLinks {
-  margin-left: auto;
-  display: flex;
-  gap: 10px;
-}
-
-.SocialLinks i {
+a {
+  text-align: center;
   padding: 8px;
-  border-radius: 50%;
+  border-radius: 80%;
   background-color: #212529;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.SocialLinks i:hover {
+a:hover {
   background-color: #176d2d;
 }

@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-const totalCircles = 45; // Quantos círculos você quer
+const totalCircles = 30; // Quantos círculos você quer
 
 for (let i = 0; i <= totalCircles; i++) {
     const circle = document.createElement('div');
