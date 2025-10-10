@@ -1,8 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-attachment: fixed;
+}
+
 h1 {
     text-align: left;
-    font-family: "Arial", Arial, sans-serif; /* altera o tipo de fonte */
-    font-size: 45px; /* altera o tamanho da fonte */
-    color: blue; /* altera a cor da fonte */
+    font-family: "Arial", Arial, sans-serif;
+    /* altera o tipo de fonte */
+    font-size: 45px;
+    /* altera o tamanho da fonte */
+    color: blue;
+    /* altera a cor da fonte */
+}
+
+header {
+    margin-right: 15px;
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
 }
 
 h2 {
@@ -21,9 +43,12 @@ h3 {
 
 h4 {
     text-align: left;
-    font-family: "Arial", Arial, sans-serif; /* altera o tipo de fonte */
-    font-size: 35px; /* altera o tamanho da fonte */
-    color: rgb(116, 0, 106); /* altera a cor da fonte */
+    font-family: "Arial", Arial, sans-serif;
+    /* altera o tipo de fonte */
+    font-size: 35px;
+    /* altera o tamanho da fonte */
+    color: rgb(116, 0, 106);
+    /* altera a cor da fonte */
     font-style: italic;
 }
 
@@ -50,14 +75,14 @@ a {
 }
 
 table {
- /*   border-collapse: collapse;  Ative ou remova essa tag para uma segunda configuração */ 
+    /*   border-collapse: collapse;  Ative ou remova essa tag para uma segunda configuração */
     margin-left: auto;
     margin-right: auto;
     border: 3px solid black;
     font-size: 20px;
 }
 
-.tab1 img{
+.tab1 img {
     float: left;
     margin-right: 10px;
 }
@@ -72,8 +97,10 @@ th {
     padding: 2px;
     background-color: rgb(0, 195, 255);
     color: white;
-    font-size: 45px; /* altera o tamanho da fonte */
-    color: blue; /* altera a cor da fonte */
+    font-size: 45px;
+    /* altera o tamanho da fonte */
+    color: blue;
+    /* altera a cor da fonte */
 }
 
 tr {
@@ -86,14 +113,24 @@ tr:nth-child(odd) {
 
 /* Substitua a tag <marquee> com animação CSS */
 @keyframes marquee {
-    0% {left: -200px;}
-    50% {left: 0px;}
-    100% {left: 200px;}
+    0% {
+        left: -200px;
+    }
+
+    50% {
+        left: 0px;
+    }
+
+    100% {
+        left: 200px;
+    }
 }
 
 .marquee-container {
     overflow: hidden;
-}/*  DESATIVE ESSA OPÇÃO, CASO JULGUE NECESSÁRIO! */
+}
+
+/*  DESATIVE ESSA OPÇÃO, CASO JULGUE NECESSÁRIO! */
 
 .marquee-content {
     position: relative;
@@ -107,33 +144,52 @@ tr:nth-child(odd) {
 }
 
 @keyframes mudar-cor {
-    0% {background-color: rgb(255, 73, 73);}
-    50% {background-color: rgb(52, 147, 255);}
-    100% {background-color: rgb(255, 251, 0);}
+    0% {
+        background-color: rgb(255, 73, 73);
+    }
+
+    50% {
+        background-color: rgb(52, 147, 255);
+    }
+
+    100% {
+        background-color: rgb(255, 251, 0);
+    }
 }
 
 @keyframes mudar-cor2 {
-    0% {color: rgb(189, 0, 0);}
-    50% {color: rgb(22, 0, 223);}
-    100% {color: rgb(0, 112, 24);}
+    0% {
+        color: rgb(189, 0, 0);
+    }
+
+    50% {
+        color: rgb(22, 0, 223);
+    }
+
+    100% {
+        color: rgb(0, 112, 24);
+    }
 }
 
 @keyframes mudar-cor3 {
     0% {
-      border-color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
     }
+
     33% {
-      border-color: rgb(168, 178, 207);
+        border-color: rgb(168, 178, 207);
     }
+
     66% {
-      border-color: rgb(0, 204, 255);
+        border-color: rgb(0, 204, 255);
     }
+
     100% {
-      border-color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
     }
 }
-  
-  /* Aplica a animação "mudar-cor" a um elemento <div> */
+
+/* Aplica a animação "mudar-cor" a um elemento <div> */
 .key1 {
     text-align: center;
     animation-name: mudar-cor;

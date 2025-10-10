@@ -9,8 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 
+<header>
+	<h3>
+		<a href="#marquee">Tag Marquee</a>
+		<a href="#links">Links</a>
+		<a href="#quemsou">Sobre</a>
+	</h3>
+</header>
+
 <body background="img/blue.jpg"> <!--Aqui começa a tag Body.-->
-	<table class="tab1"> <!--Aqui começa a tabela dos exercícios.-->
+	<table class="tab1" id="tabela"> <!--Aqui começa a tabela dos exercícios.-->
 		<tr>
 			<th width="21%" class="key2">Exercício nº 1</th>
 			<th width="39%" class="key3">Exercício nº 2</th>
@@ -72,7 +80,7 @@
 	<br>
 
 	<!--Aqui começa a tag marquee-->
-	<div class="marquee-container">
+	<div class="marquee-container" id="marquee">
 		<div class="marquee-content">
 			<h2 class="center">A tag &lt;marquee&gt; está obsoleta atualmente! <br> Hoje em dia, em
 				<img height="171" width="171" src="img/css.png">, utilizamos a tag <br><dfn>@keyframes</dfn>,<br>
@@ -83,7 +91,7 @@
 	</div>
 	<!--Aqui foram adicionados os links de curiosidade-->
 	<p>
-	<h6 class="center">Alguns links (para fins de curiosidade e para completar a tríade):</p>
+	<h6 class="center" id="links">Alguns links (para fins de curiosidade e para completar a tríade):</p>
 		<p><a href="pages/Calculadora + Cronômetro Java.html" target="_blank">Calculadora CSS + Cronômetro em Java
 				Script</a><br>
 			<a href="pages/calculadorajava.html" target="_blank">Calculadora em Java Script</a><br>
@@ -97,8 +105,8 @@
 	<h4 class="center">Me adicione nas redes sociais:<br>
 		<a href="pages/QuemSouEu.html" target="_blank">Redes sociais - Daniel Moreira</a>
 	</h4>
-		<!--Aqui começa a tabela das fotos.-->
-	<table>
+	<!--Aqui começa a tabela das fotos.-->
+	<table id="quemsou">
 		<caption>
 			Desenvolvido por:
 		</caption>
@@ -113,6 +121,7 @@
 			<td class="center"><a href="mailto:moreira.danielbueno@gmail.com">moreira.danielbueno@gmail.com</a></td>
 		</tr>
 	</table>
+	<h3><a href="#tabela">Voltar para o topo</a></h3>
 </body>
 
 </html>
