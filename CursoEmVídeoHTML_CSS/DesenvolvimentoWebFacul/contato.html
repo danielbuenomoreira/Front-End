@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Informática</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <img id="navlogo" src="imagens/cpu.jpg" alt="Logotipo da empresa">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Nome e Sobrenome">
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@dominio.com">
+            
+            <label for="celular">Nº Celular/WhatsApp:</label>
+            <input type="tel" name="celular" id="celular" required placeholder="(XX) XXXXX-XXXX">
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea cols="70" rows="10" name="mensagem" id="mensagem"></textarea>
+
+            <fieldset>
+                <legend>Forma de contato preferencial:</legend>
+                <div class="radio-group">
+                    <label for="radio-email">
+                        <input type="radio" name="contato" id="radio-email" value="email">
+                        E-mail
+                    </label>
+                    <label for="radio-telefone">
+                        <input type="radio" name="contato" id="radio-telefone" value="telefone">
+                        Telefone
+                    </label>
+                    <label for="radio-whatsapp">
+                        <input type="radio" name="contato" id="radio-whatsapp" value="whatsapp" checked>
+                        Whatsapp
+                    </label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="dia-atendimento">Qual dia gostaria de ser atendido?</label>
+                <select name="dia-atendimento" id="dia-atendimento">
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                </select>
+            </div>
+
+            <label class="checkbox-label" for="novidades">
+                <input type="checkbox" name="novidades" id="novidades" checked>
+                Gostaria de receber nossas novidades por e-mail?
+            </label>
+            
+            <input class="enviar" type="submit" value="Enviar">
+        </form>
+        
+        <table>
+            <thead>
+                <tr> <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda-feira</td>
+                    <td>9h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Terça-feira</td>
+                    <td>9h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta-feira</td>
+                    <td>9h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quinta-feira</td>
+                    <td>9h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta-feira</td>
+                    <td>9h ~ 18h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <a href="https://danielbuenomoreira.github.io/QuemSouEu/"
+                target="_blank">@danielmoreiraprogramador</a></p>
+    </footer>
+</body>
+
+</html>

@@ -1,35 +1,80 @@
+/* :root é onde definimos "Variáveis CSS".
+  Isso facilita muito a manutenção. Se quiser mudar a cor 
+  principal, você só muda em um lugar!
+*/
+:root {
+    --cor-fundo: #04108A;
+    --cor-principal: #628ca4;
+    --cor-container-fundo: white;
+    --cor-texto-escuro: #000000;
+    --cor-texto-claro: white;
+    --cor-destaque-hover: #04108A;
+    --cor-tabela-header: #555555;
+    --largura-maxima: 1100px;
+    --raio-borda: 10px;
+}
+
+/* --- Estilos Gerais --- */
 body {
-    background: #04108A;
+    background: var(--cor-fundo);
+    font-family: Arial, sans-serif; /* Boa prática definir uma fonte padrão */
+    margin: 0;
+    padding: 0;
 }
 
-main, header {
+main,
+header,
+footer {
     position: relative;
-    margin: auto;
-    width: 100%;
-    border-radius: 10px;
-    padding: 0.6% 0.6%;
-    max-width: 1100px;
+    margin: 20px auto; /* Adiciona espaço entre os elementos */
+    width: 90%; /* Melhor para responsividade */
+    max-width: var(--largura-maxima);
+    border-radius: var(--raio-borda);
+    box-sizing: border-box; /* Garante que padding não "estoure" a largura */
 }
 
-main {
-    background: white;
+main,
+footer {
+    background: var(--cor-container-fundo);
+    padding: 20px;
 }
 
 header {
-    background: #628ca4;
-    padding: 0.6% 0.6%;
+    background: var(--cor-principal);
+    padding: 20px;
 }
 
-nav {
-    position: absolute;
-    top: 65%;
-    right: 5%;
+footer {
+    text-align: center;
+}
+
+/* --- Header e Navegação (com Flexbox) --- */
+header {
+    /* Aqui está a mágica do Flexbox!
+      Isso transforma o header em um "container flexível".
+    */
+    display: flex;
+    /* 'space-between' joga o primeiro item (logo) para a esquerda
+       e o último item (nav) para a direita. */
+    justify-content: space-between;
+    /* 'center' alinha o logo e o menu verticalmente. */
+    align-items: center;
 }
 
 #navlogo {
-    width: 30%;
-    height: 30%;
-    border-radius: 10px;
+    width: 150px; /* Um tamanho mais controlado */
+    height: auto; /* Deixa a altura se ajustar automaticamente */
+    border-radius: var(--raio-borda);
+}
+
+nav {
+    /* Não precisamos mais de position: absolute! */
+}
+
+nav ul {
+    list-style: none; /* Remove bolinhas da lista */
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -39,37 +84,283 @@ nav li {
 
 nav a {
     text-transform: uppercase;
-    color: #000000;
+    color: var(--cor-texto-escuro);
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
 }
 
-.desc {
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
+nav a:hover {
+    color: var(--cor-destaque-hover);
+    text-decoration: underline;
 }
 
-.desc li {
-    display: inline-block;
+/* --- Lista de Serviços (servicos.html) --- */
+.lista-servicos {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0;
+    list-style: none; /* Remove bolinhas */
+    
+    /* Usando Flexbox de novo! */
+    display: flex;
+    /* 'space-around' distribui os itens igualmente */
+    justify-content: space-around;
+    /* 'wrap' permite que os itens quebrem para a linha de baixo
+       se não couberem (importante para celular) */
+    flex-wrap: wrap;
+}
+
+.servico-item {
     text-align: center;
-    width: 30%;
-    vertical-align: top;
-    border-color: #628ca4;
+    width: 300px; /* Um tamanho base fixo */
+    border-color: var(--cor-principal);
     border-width: 2px;
     border-style: solid;
-    border-radius: 10px;
-    margin: 1%;
+    border-radius: var(--raio-borda);
+    margin: 10px; /* Espaçamento entre os cards */
+    padding: 15px;
+    box-sizing: border-box; /* Importante! */
+    
+    /* Transição suave para o hover */
+    transition: all 0.3s ease;
 }
 
-.desc h2 {
+.servico-item:hover {
+    color: var(--cor-destaque-hover);
+    border-color: var(--cor-destaque-hover);
+    font-style: italic;
+    /* Efeito sutil de elevação */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servico-item h2 {
     font-size: 28px;
     font-weight: bold;
 }
 
-.desc img {
-    width: 30%;
-    height: 30%;
+.servico-item img {
+    width: 80px;  /* Tamanho controlado */
+    height: 80px; /* Tamanho controlado */
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
     filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.5))
+}
+
+
+/* ==================================================
+   === ESTILOS PARA A PÁGINA HOME (index.html) ===
+   ==================================================
+*/
+
+.banner-principal {
+    width: 100%; /* Faz o banner ocupar 100% da largura do <main> */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: var(--raio-borda); /* Arredonda as bordas */
+    margin-bottom: 30px; /* Adiciona um espaço abaixo do banner */
+}
+
+/* Estilos para o conteúdo de texto principal */
+main section, main article {
+    margin-bottom: 30px; /* Espaço entre as seções */
+}
+
+main section p {
+    font-size: 18px; /* Tamanho de fonte legível */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+/* Estilizando o Slogan que já tinha um ID */
+#slogan {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--cor-destaque-hover);
+    text-align: center; /* Centraliza o slogan */
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Container para "Vantagens" (Lista e Imagem) */
+.vantagens-container {
+    display: flex; /* ELA VEM! Flexbox de novo! */
+    justify-content: space-between; /* Espaço entre a lista e a imagem */
+    align-items: center; /* Alinha verticalmente */
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    margin-top: 20px; /* Espaço do H2 para o container */
+}
+
+.lista-vantagens {
+    flex: 1; /* Permite a lista crescer e ocupar o espaço */
+    min-width: 250px; /* Largura mínima antes de quebrar a linha */
+    list-style: disc; /* Garante que os marcadores de lista apareçam */
+    padding-left: 40px; /* Espaço interno para os marcadores */
+}
+
+.lista-vantagens li {
+    font-size: 20px;
+    margin-bottom: 15px; /* Espaço entre os itens da lista */
+}
+
+#tecnico {
+    flex: 1; /* Permite a imagem crescer (mas será limitada pelo max-width) */
+    max-width: 450px; /* Tamanho máximo da imagem */
+    min-width: 300px; /* Largura mínima antes de quebrar */
+    width: 100%; /* Garante que seja responsiva */
+    height: auto; /* Mantém a proporção */
+    border-radius: var(--raio-borda);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Espaço entre a lista e a imagem */
+}
+
+/* --- Formulário (contato.html) --- */
+form {
+    margin: 20px auto;
+    max-width: 700px; /* Limita a largura do formulário */
+}
+
+form label,
+form legend { /* <legend> é a etiqueta do <fieldset> */
+    display: block;
+    font-size: 20px;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+}
+
+/* Estilo para inputs de texto, email, tel, textarea e select */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea,
+form select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; /* Faz o campo ocupar 100% da largura do form */
+    box-sizing: border-box; /* Para o padding não estourar a largura */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: var(--raio-borda);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Estilos para Radio e Checkbox */
+.radio-group label,
+.checkbox-label {
+    font-size: 18px;
+    font-weight: normal;
+    display: block; /* Um por linha */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"],
+.checkbox-label input[type="checkbox"] {
+    display: inline-block; /* Lado a lado com o texto */
+    width: auto; /* Reseta a largura de 100% */
+    margin-right: 10px;
+    vertical-align: middle; /* Alinha o input com o texto */
+}
+
+.enviar {
+    width: 40%;
+    min-width: 200px; /* Largura mínima */
+    padding: 15px 0;
+    background: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.enviar:hover {
+    background: var(--cor-destaque-hover);
+}
+
+/* --- Tabela (contato.html) --- */
+table {
+    margin: 40px auto; /* Centraliza a tabela */
+    width: 80%; /* Largura da tabela */
+    border-collapse: collapse; /* Remove espaço entre bordas */
+}
+
+thead {
+    background: var(--cor-tabela-header);
+    color: var(--cor-texto-claro);
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid var(--cor-texto-escuro);
+    padding: 10px 15px;
+    text-align: left; /* Alinha o texto */
+}
+
+/* =================================================
+   --- Responsividade (Media Query) ---
+   =================================================
+*/
+/*
+  Este bloco só será aplicado se a tela do dispositivo
+  tiver 768 pixels de largura ou MENOS (ex: celulares).
+*/
+@media (max-width: 768px) {
+    header {
+        /* Empilha o logo e o menu */
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav li {
+        display: block; /* Faz os links do menu ficarem um abaixo do outro */
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .lista-servicos {
+        /* Empilha os serviços */
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .servico-item {
+        width: 90%; /* Ocupa 90% da tela */
+        max-width: 400px; /* Limite */
+    }
+    
+    /* --- NOVAS REGRAS DE RESPONSIVIDADE (Home) --- */
+    
+    .vantagens-container {
+        flex-direction: column; /* Empilha a lista e a imagem */
+    }
+    
+    #tecnico {
+        margin-left: 0; /* Remove a margem esquerda no mobile */
+        margin-top: 20px; /* Adiciona espaço acima da imagem */
+    }
+    
+    /* --- Regras antigas (Form/Tabela) --- */
+    
+    .enviar {
+        width: 100%; /* Botão ocupa a largura total */
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px; /* Diminui fonte da tabela */
+    }
 }
