@@ -110,7 +110,7 @@ nav a:hover {
     list-style: none;
     /* Remove bolinhas */
 
-    /* Usando Flexbox de novo! */
+    /* Usando Flexbox! */
     display: flex;
     /* 'space-around' distribui os itens igualmente */
     justify-content: space-around;
